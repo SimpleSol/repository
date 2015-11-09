@@ -1,6 +1,5 @@
 package com.example.leon.taskmanager.fragment;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -27,7 +26,7 @@ public class DeleteForm extends DialogFragment {
         text.setPadding(0, 45, 0, 0);
         text.setGravity(1);
 
-        return  new AlertDialog.Builder(getActivity())
+        return new AlertDialog.Builder(getActivity())
                 .setView(text)
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     @Override

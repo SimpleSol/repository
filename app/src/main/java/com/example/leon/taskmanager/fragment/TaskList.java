@@ -29,15 +29,13 @@ public class TaskList extends Fragment {
     private ListView mListView;
 
     private ArrayAdapter<Task> mListAdapter;
-
+    private int check = 0; // for checking either data was inserted or deleted
     private final ContentObserver mObserver = new ContentObserver(new Handler()) {
         @Override
         public void onChange(boolean selfChange) {
             updateDatabase();
         }
     };
-
-    private int check = 0; // for checking either data was inserted or deleted
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
