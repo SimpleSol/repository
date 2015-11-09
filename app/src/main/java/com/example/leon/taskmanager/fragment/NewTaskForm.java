@@ -21,7 +21,7 @@ public class NewTaskForm extends DialogFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (getTargetFragment() instanceof TaskList) {
-                            ((TaskList)  getTargetFragment()).onNewTaskFormOkClick(input.getText().toString());
+                            ((TaskList) getTargetFragment()).onNewTaskFormOkClick(input.getText().toString());
                         }
                     }
                 })

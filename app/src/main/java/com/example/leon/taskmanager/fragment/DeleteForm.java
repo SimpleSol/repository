@@ -5,7 +5,6 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.widget.TextView;
 
 /**
  * Created by Leon on 19.10.2015.
@@ -20,14 +19,10 @@ public class DeleteForm extends DialogFragment {
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        final TextView text = new TextView(getActivity());
-        text.setTextSize(20);
-        text.setText("Are You Sure?");
-        text.setPadding(0, 45, 0, 0);
-        text.setGravity(1);
+
 
         return new AlertDialog.Builder(getActivity())
-                .setView(text)
+                .setMessage("Are you sure?")
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
